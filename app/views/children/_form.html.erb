@@ -11,6 +11,27 @@
     </div>
   <% end %>
 
+  <div class="field">
+    <%= f.label :first_name %><br>
+    <%= f.text_field :first_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :last_name %><br>
+    <%= f.text_field :last_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :birthday %><br>
+    <%= f.date_field :birthday %>
+  </div>
+
+  <div class="field">
+    <%= f.label :always_with_parent %><br>
+    <%= f.radio_button(:always_with_parent, true)  %><%= f.label(:always_with_parent_true, "Yes") %>
+    <%= f.radio_button(:always_with_parent, false) %><%= f.label(:always_with_parent_true, "No") %>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>

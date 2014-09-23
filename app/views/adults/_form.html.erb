@@ -11,6 +11,37 @@
     </div>
   <% end %>
 
+  <div class="field">
+    <%= f.label :first_name %><br>
+    <%= f.text_field :first_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :last_name %><br>
+    <%= f.text_field :last_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :phone %><br>
+    <%= f.text_field :phone %>
+  </div>
+
+  <div class="field">
+    <%= f.label :text_messagable %><br>
+    <%= f.radio_button(:text_messagable, true)  %><%= f.label(:text_messagable_true, "Yes") %>
+    <%= f.radio_button(:text_messagable, false) %><%= f.label(:text_messagable_true, "No") %>
+  </div>
+
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+
+  <div class="field">
+    <%= f.label :address %><br>
+    <%= f.text_area :address %>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>

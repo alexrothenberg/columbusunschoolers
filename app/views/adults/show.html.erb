@@ -1,4 +1,29 @@
 <p id="notice"><%= notice %></p>
 
+<p id="notice"><%= notice %></p>
+
+<h1>The <%= @family.name %> Family</h1>
+
+<h2>Primary Adult Information</h2>
+<p><label>Primary Adult:</label> <%= link_to @family.primary_adult.name, adult_path(@family.primary_adult) %></p>
+<p><label>Cell Phone:</label>    <%= @family.primary_adult.phone %></p>
+<p><label>Text Msg?:</label>     Yes</p>
+<p><label>Email Address:</label> <%= mail_to @family.primary_adult.email %></p>
+<p><label>Address:</label>       <%= @family.address %></p>
+
+<h2>Emergency Contact</h2>
+<p><label>First Name:</label>                  Dad</p>
+<p><label>Last Name:</label>                   Someone</p>
+<p><label>Phone Number:</label>                555-1212</p>
+<p><label>Emergency Contact Text Msg?:</label> No</p>
+<p><label>Relationship to Child(ren):</label>  Father</p>
+
+<h2>Child(ren):</h2>
+<%= render @family.children %></p>
+
+<h2>Other Adults:</h2>
+None
+</p>
+
 <%= link_to 'Edit', edit_adult_path(@adult) %> |
 <%= link_to 'Back', adults_path %>

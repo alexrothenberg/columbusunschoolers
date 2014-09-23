@@ -16,11 +16,9 @@
     <% @families.each do |family| %>
       <tr>
         <td><%= link_to family.name, family_path(family) %></td>
-        <td><%= link_to family.primary_adult.name, adult_path(family.primary_adult) %></td>
+        <td><%= link_to family.primary_adult.name, edit_adult_path(family.primary_adult) %></td>
         <td><%= family.other_adults.join(', ') %></td>
         <td><%= render family.children %></td>
-        <td><%= link_to 'Show', family %></td>
-        <td><%= link_to 'Edit', edit_family_path(family) %></td>
         <td><%= link_to 'Destroy', family, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>

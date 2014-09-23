@@ -5,6 +5,7 @@ class CreateAdults < ActiveRecord::Migration
       t.string     :last_name
       t.string     :email
       t.string     :phone
+      t.string     :address
       t.boolean    :text_messagable
       t.boolean    :irregular_attendance
       t.references :family

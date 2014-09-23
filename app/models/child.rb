@@ -12,4 +12,8 @@ class Child < ActiveRecord::Base
   def name
     "#{first_name} #{last_name}"
   end
+
+  def age
+    Date.today.year - birthday.year
+  end
 end

@@ -13,3 +13,11 @@
  *= require_tree .
  *= require_self
  */
+
+tr.odd {
+  background-color: #ddecf5;
+}
+
+tr.odd {
+  background-color: #ddecf5;
+}

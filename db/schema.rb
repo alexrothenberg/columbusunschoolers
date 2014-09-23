@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 20140923134140) do
     t.string   "last_name"
     t.string   "email"
     t.string   "phone"
+    t.string   "address"
     t.boolean  "text_messagable"
     t.boolean  "irregular_attendance"
     t.integer  "family_id"
@@ -45,7 +46,6 @@ ActiveRecord::Schema.define(version: 20140923134140) do
   end
 
   create_table "families", force: true do |t|
-    t.string   "address"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

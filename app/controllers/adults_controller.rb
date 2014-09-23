@@ -33,7 +33,7 @@ class AdultsController < ApplicationController
   # PATCH/PUT /adults/1
   def update
     if @adult.update(adult_params)
-      redirect_to @adult, notice: 'Adult was successfully updated.'
+      redirect_to @adult.family, notice: 'Adult was successfully updated.'
     else
       render :edit
     end
@@ -53,6 +53,6 @@ class AdultsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def adult_params
-      params[:adult]
+      params[:adult].permit(:first_name, :last_name, :phone, :text_messagable, :email, :address)
     end
 end
