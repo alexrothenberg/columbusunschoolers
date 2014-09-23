@@ -6,9 +6,24 @@
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body id='wrapper'>
+  <div id="container">
 
-<%= yield %>
+    <div id="header">
+      <h1>
+        <a href="/" title="Columbus Unschoolers' Co-op">
+          <%= image_tag 'logo.png', alt:"Columbus Unschoolers' Co-op" %>
+          <span>Columbus Unschoolers' Co-op</span>
+        </a>
 
+          <%= link_to 'Families', families_path %>
+          <%= link_to 'Courses',  courses_path %>
+      </h1>
+
+    </div>
+
+    <%= yield %>
+
+  </div>
 </body>
 </html>

@@ -14,7 +14,7 @@
     <th>Other Adult(s)</th>
     <th>Child(ren)</th>
     <% @families.each do |family| %>
-      <tr>
+      <tr class="<%= cycle('odd', 'even')%>">
         <td><%= link_to family.name, family_path(family) %></td>
         <td><%= link_to family.primary_adult.name, edit_adult_path(family.primary_adult) %></td>
         <td><%= family.other_adults.join(', ') %></td>

@@ -16,7 +16,7 @@
     <th>Adults</th>
     <th>Children</th>
     <% @courses.each do |course| %>
-      <tr>
+      <tr class="<%= cycle('odd', 'even')%>">
         <td><%= link_to course.name, course_path(course) %></td>
         <td><%= course.description %></td>
         <td>Ages: <%=course.minimum_age%>-<%=course.maximum_age%> (Suggestion)</td>
