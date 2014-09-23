@@ -1,5 +1,7 @@
 class Child < ActiveRecord::Base
   belongs_to :family
+  has_many :course_children
+  has_many :courses, through: :course_children
 
   before_create :use_family_name
 

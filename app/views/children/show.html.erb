@@ -1,4 +1,14 @@
 <p id="notice"><%= notice %></p>
 
+<h1><%= @child.name%></h1>
+
+<p><label>First Name:</label>         <%= @child.first_name %></p>
+<p><label>Last Name:</label>          <%= @child.last_name %></p>
+<p><label>Birthday:</label>           <%= @child.birthday.to_s(:long) %></p>
+<p><label>Always with Parent?</label> <%= @child.always_with_parent %></p>
+
 <%= link_to 'Edit', edit_child_path(@child) %> |
 <%= link_to 'Back', children_path %>
+
+<h2>Courses</h2>
+<%= render @child.courses %>

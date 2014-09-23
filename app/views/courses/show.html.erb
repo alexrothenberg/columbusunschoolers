@@ -1,4 +1,15 @@
 <p id="notice"><%= notice %></p>
 
-<%= link_to 'Edit', edit_course_path(@course) %> |
+<h1><%= @course.name %></h1>
+
+<p><label>Description:</label> <%= @course.description %></p>
+<p><label>Ages:</label> (suggested) <%= @course.minimum_age%>-<%= @course.maximum_age%></p>
+<p><label>Number of Students:</label> <%= @course.minimum_student_count%>-<%= @course.maximum_student_count%></p>
+<p><label>Adults</label><br>
+  <%= render @course.course_adults %>
+</p>
+<p><label>Children</label><br>
+  <%= render @course.children %>
+</p>
+
 <%= link_to 'Back', courses_path %>

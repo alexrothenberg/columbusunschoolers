@@ -3,3 +3,8 @@
 <%= render 'form' %>
 
 <%= link_to 'Back', family_path(@adult.family) %>
+
+<h2>Courses</h2>
+<% @adult.course_adults.each do |course_adult| %>
+  <%= link_to course_adult.course.name, course_path(course_adult.course) %> (<%= course_adult.role%>)<br>
+<% end %>

@@ -11,6 +11,52 @@
     </div>
   <% end %>
 
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_field :description %>
+  </div>
+
+  <div class="field">
+    <%= f.label :minimum_age %><br>
+    <%= f.text_field :minimum_age %>
+  </div>
+
+  <div class="field">
+    <%= f.label :maximum_age %><br>
+    <%= f.text_field :maximum_age %>
+  </div>
+
+  <div class="field">
+    <%= f.label :minimum_student_count %><br>
+    <%= f.text_field :minimum_student_count %>
+  </div>
+
+  <div class="field">
+    <%= f.label :maximum_student_count %><br>
+    <%= f.text_field :maximum_student_count %>
+  </div>
+
+  <div class="field">
+    <%= f.label :room_requirements %><br>
+    <%= f.text_field :room_requirements %>
+  </div>
+
+  <div class="field">
+    <%= f.label :time_requirements %><br>
+    <%= f.text_field :time_requirements %>
+  </div>
+
+  <div class="field">
+    <%= f.label :drop_ins_allowed %><br>
+    <%= f.radio_button(:drop_ins_allowed, true)  %><%= f.label(:drop_ins_allowed_true, "Yes") %>
+    <%= f.radio_button(:drop_ins_allowed, false) %><%= f.label(:drop_ins_allowed_false, "No") %>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
