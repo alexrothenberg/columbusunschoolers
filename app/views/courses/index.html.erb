@@ -8,11 +8,21 @@
   </thead>
 
   <tbody>
+    <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Ages</th>
+    <th>Number of Students</th>
+    <th>Adults</th>
+    <th>Children</th>
     <% @courses.each do |course| %>
       <tr>
-        <td><%= link_to 'Show', course %></td>
-        <td><%= link_to 'Edit', edit_course_path(course) %></td>
-        <td><%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to course.name, course_path(course) %></td>
+        <td><%= course.description %></td>
+        <td>Ages: <%=course.minimum_age%>-<%=course.maximum_age%> (Suggestion)</td>
+        <td>Number of Students: <%=course.minimum_student_count%>-<%=course.maximum_student_count%></td>
+        <td><%= render course.course_adults %></td>
+        <td><%= render course.children %></td>
       </tr>
     <% end %>
   </tbody>

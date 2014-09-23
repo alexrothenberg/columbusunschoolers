@@ -19,7 +19,6 @@
         <td><%= link_to family.primary_adult.name, edit_adult_path(family.primary_adult) %></td>
         <td><%= family.other_adults.join(', ') %></td>
         <td><%= render family.children %></td>
-        <td><%= link_to 'Destroy', family, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

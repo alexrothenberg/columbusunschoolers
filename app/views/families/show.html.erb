@@ -24,4 +24,5 @@ None
 </p>
 
 <%= link_to 'Edit', edit_family_path(@family) %> |
+<%= link_to 'Destroy', @family, method: :delete, data: { confirm: 'Are you sure?' } %>
 <%= link_to 'Back', families_path %>
