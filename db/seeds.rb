@@ -5,16 +5,21 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+if Rails.env.development?
+  ENV['DEFAULT_PASSWORD'] ||= 'password'
+else
+  raise 'Need to set ENV var "DEFAULT_PASSWORD"' if ENV['DEFAULT_PASSWORD'].nil?
+end
 
 Family.destroy_all
 
 the_smiths = Family.create()
-jane_smith = the_smiths.adults.create(first_name: 'Jane', last_name: 'Smith', email: 'jane_smith@example.com', phone: '555-1212', text_messagable: true, address: ['123 Main St', 'Anytown USA'].join("\n"))
+jane_smith = the_smiths.adults.create(password: ENV['DEFAULT_PASSWORD'], first_name: 'Jane', last_name: 'Smith', email: 'jane_smith@example.com', phone: '555-1212', text_messagable: true, address: ['123 Main St', 'Anytown USA'].join("\n"))
 junior_smith = the_smiths.children.create(first_name: 'Junior', birthday: 'May 1, 2008'.to_date, always_with_parent: false)
 baby_smith = the_smiths.children.create(  first_name: 'Baby',   birthday: 1.month.ago,           always_with_parent: true)
 
 the_joneses = Family.create()
-amy_jones = the_joneses.adults.create(first_name: 'Amy', last_name: 'jones', email: 'jane_jones@example.com', phone: '555-1212', text_messagable: true, address: ['123 Main St', 'Anytown USA'].join("\n"))
+amy_jones = the_joneses.adults.create(password: ENV['DEFAULT_PASSWORD'], first_name: 'Amy', last_name: 'jones', email: 'jane_jones@example.com', phone: '555-1212', text_messagable: true, address: ['123 Main St', 'Anytown USA'].join("\n"))
 bob_jones = the_joneses.children.create(first_name: 'Bob', birthday: 'May 1, 2011'.to_date, always_with_parent: false)
 susan_jones = the_joneses.children.create(  first_name: 'Susan', birthday: 5.years.ago,           always_with_parent: false)
 
