@@ -1,6 +1,33 @@
 #header {
     background: linear-gradient( 180deg, #2473B7, #E7F2F8);
+    span {
+        color: #fff;
+        font-weight: bold;
+        text-shadow: #1659ac 0px 1px 3px;
+        font-size: 3em;
+        margin-right: 50px;
+    }
+
+    a {
+        margin-right: 20px;
+    }
+
+    #logged_in {
+        float: right;
+        color: #fff;
+        a {
+          color: #ccf;
+        }
+    }
 }
+
+
+
+
+
+
+
+
 
 
 .book-navigation .menu {
