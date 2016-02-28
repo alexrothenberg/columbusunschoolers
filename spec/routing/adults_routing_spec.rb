@@ -20,6 +20,7 @@ RSpec.describe AdultsController, :type => :routing do
     end
 
     it "routes to #create" do
+      pending
       expect(:post => "/adults").to route_to("adults#create")
     end
 

@@ -19,6 +19,7 @@ require 'rails_helper'
 # that an instance is receiving a specific message.
 
 RSpec.describe AdultsController, :type => :controller do
+  login_adult
 
   # This should return the minimal set of attributes required to create a valid
   # Adult. As you add validations to Adult, be sure to

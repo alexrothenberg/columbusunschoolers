@@ -2,6 +2,7 @@ require 'rails_helper'
 
 RSpec.describe "families/index", :type => :view do
   before(:each) do
+    pending
     assign(:families, [
       Family.create!(),
       Family.create!()

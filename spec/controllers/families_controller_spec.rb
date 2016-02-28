@@ -19,6 +19,7 @@ require 'rails_helper'
 # that an instance is receiving a specific message.
 
 RSpec.describe FamiliesController, :type => :controller do
+  login_adult
 
   # This should return the minimal set of attributes required to create a valid
   # Family. As you add validations to Family, be sure to

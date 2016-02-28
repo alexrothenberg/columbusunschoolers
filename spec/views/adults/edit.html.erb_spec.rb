@@ -2,6 +2,7 @@ require 'rails_helper'
 
 RSpec.describe "adults/edit", :type => :view do
   before(:each) do
+    pending
     @adult = assign(:adult, Adult.create!())
   end
 
